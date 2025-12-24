@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
-# script to update the system packages
+################################################
+#Script Name: system_update.sh
+#Description: This script is to update the system packages
+# Author: Prakash
+# Date: 2024-06-10
+# Version: 1.0
+# Usage: ./system_update.sh
+################################################
+
 IP="google.com"
 COUNT=4
 TIMESTAMP=$(date +%Y-%m-%d_%H:%M:%S)   
@@ -14,7 +22,7 @@ exec >> "$LOG_FILE" 2>&1
 echo "Script Started at $(date)"
 
 #set -x 
-#set -e
+ set -e
 
 echo "Checking Network Connectivity.."
 if ping -c $COUNT $IP > /dev/null 2>&1; then
