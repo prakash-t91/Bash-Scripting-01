@@ -1,9 +1,17 @@
 #!/usr/bin/env bash
+################################################
+#Script Name: system_monitoring.sh
+#Description: This script monitors system resources like CPU, Memory, and Disk usage.
+#Author: Prakash
+#Date: 2024-06-10
+#Version: 1.0
+#Usage: ./system_monitoring.sh
+################################################
 
-# System Monitoring Script
 TIMESTAMP=$(date +%Y-%m-%d_%H:%M:%S)   
 # LOG_FILE="/var/log/mycustomlog/system_monitoring.log"
 LOG_FILE="./system_monitoring.log"
+
 # Redirect stdout and stderr to a log file
 echo "System Monitoring Script Started..$(date) Writing Log..Please wait.."
 exec >> "$LOG_FILE" 2>&1
